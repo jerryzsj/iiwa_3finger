@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>iiwa</name>
+  <version>1.4.0</version>
+  <description>Collection of ROS packages for the KUKA LBR IIWA</description>
+  <author email="senjing.zheng@gmail.com">Senjing Zheng</author>
+  <maintainer email="senjing.zheng@gmail.com">Senjing Zheng</maintainer>
+  
+  <license>BSD</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <run_depend>iiwa_3finger_description</run_depend>
+  <run_depend>iiwa_3finer_examples</run_depend>
+  <run_depend>iiwa_3finger_moveit</run_depend>
+  
+  <export>
+    <metapackage/>
+  </export>
+  
+</package>
