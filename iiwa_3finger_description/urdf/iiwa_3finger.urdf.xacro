@@ -11,7 +11,7 @@
   <!--  Arguments for the iiwa14 macro  -->
   <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
   <xacro:arg name="robot_name" default="iiwa"/>
-  <xacro:arg name="prefix" default=""/>
+  <!-- xacro:arg name="prefix" default=""/-->
   
 
 
@@ -95,19 +95,19 @@
   <!--  Here we define another fixed joint. It is placed at the end of the coupling-->
   <joint name="couling_joint" type="fixed">
     <parent link="coupling_link" />
-    <child link = "${prefix}palm" />
+    <child link = "palm" />
     <origin xyz="0.04 0.07 0.04" rpy="${PI/2} ${PI/2} ${PI/2}" />   
   </joint>
 
     <!-- Insert the fingers -->
-    <xacro:robotiq_finger prefix="${prefix}finger_1_"/>
-    <xacro:robotiq_finger prefix="${prefix}finger_2_"/>
-    <xacro:robotiq_finger prefix="${prefix}finger_middle_"/>
+    <xacro:robotiq_finger prefix="finger_1_"/>
+    <xacro:robotiq_finger prefix="finger_2_"/>
+    <xacro:robotiq_finger prefix="finger_middle_"/>
 
       <!-- link list -->
 
       <!-- Link palm -->
-      <link name="${prefix}palm">
+      <link name="palm">
         <visual>
           <geometry>
             <mesh filename="package://iiwa_tool_description/meshes/visual/palm.STL" />
@@ -142,7 +142,7 @@
         </inertial>
       </link>
 
-      <gazebo reference="${prefix}palm">
+      <gazebo reference="palm">
         <mu1>1.1</mu1>
         <mu2>1.1</mu2>
       </gazebo>
@@ -151,9 +151,9 @@
     <!-- Joint list -->
 
     <!-- Joint palm_finger_1_joint -->
-    <joint name="${prefix}palm_finger_1_joint" type="revolute">
-      <parent link="${prefix}palm"/>
-      <child link="${prefix}finger_1_link_0"/>
+    <joint name="palm_finger_1_joint" type="revolute">
+      <parent link="palm"/>
+      <child link="finger_1_link_0"/>
       <dynamics damping="1" friction="0" />
       <axis xyz="0 1 0"/>
       <origin rpy="0 3.1416 -1.57" xyz="-0.0455 0.0214 0.036"/>
@@ -161,14 +161,14 @@
       <limit lower="-0.2967" upper="0.2967" effort="60" velocity="-1"/>
     </joint>
 
-    <gazebo reference="${prefix}palm_finger_1_joint">
+    <gazebo reference="palm_finger_1_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
     <!-- Joint palm_finger_2_joint -->
-    <joint name="${prefix}palm_finger_2_joint" type="revolute">
-      <parent link="${prefix}palm"/>
-      <child link="${prefix}finger_2_link_0"/>
+    <joint name="palm_finger_2_joint" type="revolute">
+      <parent link="palm"/>
+      <child link="finger_2_link_0"/>
       <dynamics damping="1" friction="0" />
       <axis xyz="0 1 0"/>
       <origin rpy="0 3.1416 -1.57" xyz="-0.0455 0.0214 -0.036"/>
@@ -176,21 +176,21 @@
       <limit lower="-0.2967" upper="0.2967" effort="60" velocity="-1"/>
     </joint>
 
-    <gazebo reference="${prefix}palm_finger_2_joint">
+    <gazebo reference="palm_finger_2_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
     <!-- Joint palm_finger_middle_joint -->
-    <joint name="${prefix}palm_finger_middle_joint" type="revolute">
-      <parent link="${prefix}palm"/>
-      <child link="${prefix}finger_middle_link_0"/>
+    <joint name="palm_finger_middle_joint" type="revolute">
+      <parent link="palm"/>
+      <child link="finger_middle_link_0"/>
       <dynamics damping="1" friction="0" />
       <axis xyz="0 1 0"/>
       <origin rpy="0 0 1.57" xyz="0.0455 0.0214 0"/>
       <limit lower="0" upper="0" effort="60" velocity="-1"/>
     </joint>
 
-    <gazebo reference="${prefix}palm_finger_middle_joint">
+    <gazebo reference="palm_finger_middle_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
