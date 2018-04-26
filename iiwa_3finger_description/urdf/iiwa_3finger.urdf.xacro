@@ -73,7 +73,7 @@
         <geometry>
           <mesh filename="package://iiwa_3finger_description/meshes/visual/coupling.STL" />
         </geometry>
-        <material name="Black">
+        <material name="Grey">
           <!--color rgba="0 1 0 1"/-->
         </material>
       </visual>
@@ -82,7 +82,7 @@
         <geometry>
           <mesh filename="package://iiwa_3finger_description/meshes/visual/collision/coupling.STL" />
         </geometry>
-        <material name="Black">
+        <material name="Grey">
           <!--color rgba="0 1 1 1"/-->
         </material>
       </collision>
