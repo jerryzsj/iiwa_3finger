@@ -7,6 +7,7 @@
   <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
   <!--Import the iiwa14 macro -->
   <xacro:include filename="$(find iiwa_description)/urdf/iiwa14.xacro"/>
+  <xacro:include filename="$(find iiwa_3finger_description)/urdf/robotiq_finger.urdf.xacro"/>
   
   <!--  Arguments for the iiwa14 macro  -->
   <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
