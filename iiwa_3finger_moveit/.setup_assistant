@@ -1,8 +1,8 @@
 moveit_setup_assistant_config:
   URDF:
-    package: iiwa_tool_description
-    relative_path: urdf/iiwa_tool.urdf
+    package: iiwa_3finger_description
+    relative_path: urdf/iiwa_3finger.urdf.xacro
   SRDF:
-    relative_path: config/iiwa7_tool.srdf
+    relative_path: config/iiwa_3finger.srdf
   CONFIG:
     generated_timestamp: 1457651071
