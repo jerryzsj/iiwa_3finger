@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>iiwa</name>
+  <name>iiwa_3finger</name>
   <version>1.4.0</version>
   <description>Collection of ROS packages for the KUKA LBR IIWA</description>
   <author email="senjing.zheng@gmail.com">Senjing Zheng</author>
