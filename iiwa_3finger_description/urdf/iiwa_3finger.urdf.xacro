@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- Here we define the robot, we named it "iiwa14_3finger_gripper" -->
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="iiwa_3finger">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
@@ -22,6 +22,7 @@
   If you don't want to have that you can define a basic world link (see commented lines)
   -->
 
+  <xacro:macro name="iiwa_3finger" params="parent hardware_interface robot_name *origin">
   
     <!--     <link name="world"/> -->
   <link name="world">
@@ -194,5 +195,8 @@
     <gazebo reference="palm_finger_middle_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
+
+
+    </xacro:macro>
 
 </robot> 
