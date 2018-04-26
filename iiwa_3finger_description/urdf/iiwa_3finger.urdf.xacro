@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- Here we define the robot, we named it "iiwa14_3finger_gripper" -->
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="iiwa_3finger">
 
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
