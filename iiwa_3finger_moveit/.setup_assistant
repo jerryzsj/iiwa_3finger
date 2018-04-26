@@ -1,7 +1,7 @@
 moveit_setup_assistant_config:
   URDF:
     package: iiwa_3finger_description
-    relative_path: urdf/iiwa_3finger.urdf.xacro
+    relative_path: urdf/iiwa_3finger.urdf
   SRDF:
     relative_path: config/iiwa_3finger.srdf
   CONFIG:
