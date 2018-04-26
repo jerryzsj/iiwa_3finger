@@ -3,6 +3,8 @@ project(iiwa_3finger_description)
 
 find_package(catkin REQUIRED)
 
+find_package(iiwa)
+
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES iiwa_description
