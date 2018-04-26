@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(iiwa_tool_moveit)
+project(iiwa_3finger_moveit)
 
 find_package(catkin REQUIRED)
 
